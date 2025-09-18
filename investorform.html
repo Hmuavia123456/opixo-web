@@ -70,7 +70,7 @@
 
 
         <!-- page wrapper + navbar exist on your page -->
-        <div class="page-wrapper" style="padding-top:500px;">
+        <div class="page-wrapper" style="padding-top:120px;">
             <!-- your navbar is already in the page (we're not duplicating it here) -->
 
             <!-- Investor section -->
@@ -97,79 +97,91 @@
                                     <form id="investor-form" name="investor-form" method="post"
                                         enctype="multipart/form-data" class="sign-up-from" novalidate>
                                         <!-- Basic Info -->
-                                        <div class="sign-up-field-wrapper">
-                                            <label class="text-size-regular text-color-black-800">Full Name *</label>
-                                            <input class="sign-up-input w-input" name="fullName" type="text"
-                                                placeholder="Your full name" required />
-                                            <div class="error" data-for="fullName"></div>
+
+                                        <div style="display:flex; gap:20px; flex-wrap:wrap;">
+                                            <div class="sign-up-field-wrapper" style="flex:1;">
+                                                <label class="text-size-regular text-color-black-800">Full Name
+                                                    *</label>
+                                                <input class="sign-up-input w-input" name="fullName" type="text"
+                                                    placeholder="Your full name" required />
+                                                <div class="error" data-for="fullName"></div>
+                                            </div>
+
+                                            <div class="sign-up-field-wrapper" style="flex:1;">
+                                                <label class="text-size-regular text-color-black-800">Email *</label>
+                                                <input class="sign-up-input w-input" name="email" type="email"
+                                                    placeholder="you@example.com" required />
+                                                <div class="error" data-for="email"></div>
+                                            </div>
                                         </div>
 
-                                        <div class="sign-up-field-wrapper">
-                                            <label class="text-size-regular text-color-black-800">Email *</label>
-                                            <input class="sign-up-input w-input" name="email" type="email"
-                                                placeholder="you@example.com" required />
-                                            <div class="error" data-for="email"></div>
+
+                                        <!-- Phone + Company Row -->
+                                        <div style="display:flex; gap:20px; flex-wrap:wrap;">
+                                            <div class="sign-up-field-wrapper" style="flex:1;">
+                                                <label class="text-size-regular text-color-black-800">Phone Number
+                                                    *</label>
+                                                <input class="sign-up-input w-input" name="phone" type="tel"
+                                                    placeholder="+92xxxxxxxxxx" required />
+                                                <div class="error" data-for="phone"></div>
+                                            </div>
+
+                                            <div class="sign-up-field-wrapper" style="flex:1;">
+                                                <label class="text-size-regular text-color-black-800">Company /
+                                                    Organization (Optional)</label>
+                                                <input class="sign-up-input w-input" name="company" type="text"
+                                                    placeholder="Company name (if any)" />
+                                            </div>
                                         </div>
 
-                                        <div class="sign-up-field-wrapper">
-                                            <label class="text-size-regular text-color-black-800">Phone Number *</label>
-                                            <input class="sign-up-input w-input" name="phone" type="tel"
-                                                placeholder="+92xxxxxxxxxx" required />
-                                            <div class="error" data-for="phone"></div>
+                                        <!-- LinkedIn / Website + Investment Range -->
+                                        <div style="display:flex; gap:20px; flex-wrap:wrap;">
+                                            <div class="sign-up-field-wrapper" style="flex:1;">
+                                                <label class="text-size-regular text-color-black-800">LinkedIn / Website
+                                                    (Optional)</label>
+                                                <input class="sign-up-input w-input" name="linkedin" type="url"
+                                                    placeholder="https://linkedin.com/in/yourprofile" />
+                                            </div>
+
+                                            <div class="sign-up-field-wrapper" style="flex:1;">
+                                                <label class="text-size-regular text-color-black-800">Investment Range
+                                                    *</label>
+                                                <select name="investmentRange" class="sign-up-input w-input" required>
+                                                    <option value="">-- Select approximate range --</option>
+                                                    <option value="under_1m">Under 1,000,000 PKR</option>
+                                                    <option value="1m_5m">1,000,000 - 5,000,000 PKR</option>
+                                                    <option value="5m_20m">5,000,000 - 20,000,000 PKR</option>
+                                                    <option value="20m_plus">20,000,000+ PKR</option>
+                                                </select>
+                                                <div class="error" data-for="investmentRange"></div>
+                                            </div>
                                         </div>
 
-                                        <!-- Professional -->
-                                        <div class="sign-up-field-wrapper">
-                                            <label class="text-size-regular text-color-black-800">Company / Organization
-                                                (Optional)</label>
-                                            <input class="sign-up-input w-input" name="company" type="text"
-                                                placeholder="Company name (if any)" />
+                                        <!-- Investment Type + Location -->
+                                        <div style="display:flex; gap:20px; flex-wrap:wrap;">
+                                            <div class="sign-up-field-wrapper" style="flex:1;">
+                                                <label class="text-size-regular text-color-black-800">Preferred
+                                                    Investment Type *</label>
+                                                <select name="investmentType" class="sign-up-input w-input" required>
+                                                    <option value="">-- Choose type --</option>
+                                                    <option value="equity">Equity</option>
+                                                    <option value="debt">Debt</option>
+                                                    <option value="joint_venture">Joint Venture / Partnership</option>
+                                                    <option value="buy_land">Buy Land / Asset Purchase</option>
+                                                </select>
+                                                <div class="error" data-for="investmentType"></div>
+                                            </div>
+
+                                            <div class="sign-up-field-wrapper" style="flex:1;">
+                                                <label class="text-size-regular text-color-black-800">Country / City
+                                                    *</label>
+                                                <input class="sign-up-input w-input" name="location" type="text"
+                                                    placeholder="City, Country" required />
+                                                <div class="error" data-for="location"></div>
+                                            </div>
                                         </div>
 
-                                        <div class="sign-up-field-wrapper">
-                                            <label class="text-size-regular text-color-black-800">LinkedIn / Website
-                                                (Optional)</label>
-                                            <input class="sign-up-input w-input" name="linkedin" type="url"
-                                                placeholder="https://linkedin.com/in/yourprofile" />
-                                        </div>
-
-                                        <!-- Financial / Investment -->
-                                        <div class="sign-up-field-wrapper">
-                                            <label class="text-size-regular text-color-black-800">Investment Range
-                                                *</label>
-                                            <select name="investmentRange" class="sign-up-input w-input" required>
-                                                <option value="">-- Select approximate range --</option>
-                                                <option value="under_1m">Under 1,000,000 PKR</option>
-                                                <option value="1m_5m">1,000,000 - 5,000,000 PKR</option>
-                                                <option value="5m_20m">5,000,000 - 20,000,000 PKR</option>
-                                                <option value="20m_plus">20,000,000+ PKR</option>
-                                            </select>
-                                            <div class="error" data-for="investmentRange"></div>
-                                        </div>
-
-                                        <div class="sign-up-field-wrapper">
-                                            <label class="text-size-regular text-color-black-800">Preferred Investment
-                                                Type *</label>
-                                            <select name="investmentType" class="sign-up-input w-input" required>
-                                                <option value="">-- Choose type --</option>
-                                                <option value="equity">Equity</option>
-                                                <option value="debt">Debt</option>
-                                                <option value="joint_venture">Joint Venture / Partnership</option>
-                                                <option value="buy_land">Buy Land / Asset Purchase</option>
-                                            </select>
-                                            <div class="error" data-for="investmentType"></div>
-                                        </div>
-
-                                        <!-- Location -->
-                                        <div class="sign-up-field-wrapper">
-                                            <label class="text-size-regular text-color-black-800">Country / City
-                                                *</label>
-                                            <input class="sign-up-input w-input" name="location" type="text"
-                                                placeholder="City, Country" required />
-                                            <div class="error" data-for="location"></div>
-                                        </div>
-
-                                        <!-- Message -->
+                                        <!-- Message (single full-width row) -->
                                         <div class="sign-up-field-wrapper">
                                             <label class="text-size-regular text-color-black-800">Brief message: What
                                                 are you looking for? *</label>
@@ -179,21 +191,23 @@
                                             <div class="error" data-for="message"></div>
                                         </div>
 
-                                        <!-- Documents (optional but recommended) -->
-                                        <div class="sign-up-field-wrapper">
-                                            <label class="text-size-regular text-color-black-800">Upload ID / KYC
-                                                (optional)</label>
-                                            <input class="sign-up-input w-input" name="idDoc" type="file"
-                                                accept="image/*,.pdf" />
-                                            <div class="file-preview" id="idPreview"></div>
-                                        </div>
+                                        <!-- Documents Row -->
+                                        <div style="display:flex; gap:20px; flex-wrap:wrap;">
+                                            <div class="sign-up-field-wrapper" style="flex:1;">
+                                                <label class="text-size-regular text-color-black-800">Upload ID / KYC
+                                                    (optional)</label>
+                                                <input class="sign-up-input w-input" name="idDoc" type="file"
+                                                    accept="image/*,.pdf" />
+                                                <div class="file-preview" id="idPreview"></div>
+                                            </div>
 
-                                        <div class="sign-up-field-wrapper">
-                                            <label class="text-size-regular text-color-black-800">Relevant Financial
-                                                Proof (optional)</label>
-                                            <input class="sign-up-input w-input" name="financeDoc" type="file"
-                                                accept="image/*,.pdf" />
-                                            <div class="file-preview" id="financePreview"></div>
+                                            <div class="sign-up-field-wrapper" style="flex:1;">
+                                                <label class="text-size-regular text-color-black-800">Relevant Financial
+                                                    Proof (optional)</label>
+                                                <input class="sign-up-input w-input" name="financeDoc" type="file"
+                                                    accept="image/*,.pdf" />
+                                                <div class="file-preview" id="financePreview"></div>
+                                            </div>
                                         </div>
 
                                         <!-- Terms -->
@@ -317,7 +331,7 @@
             </script>
 
 
-            <footer class="section-footer" style="padding-top:650px;">
+            <footer class="section-footer" style="padding-top:250px;">
                 <div class="padding-global">
                     <div class="container-large">
                         <div class="footer-component">

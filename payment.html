@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Land owner Registrationform</title>
+    <title>payment page</title>
     <meta content="Opixo - Webflow HTML website template" property="og:title" />
     <meta
       content="Opixo - Webflow HTML website template"
@@ -100,229 +100,221 @@
           </div>
         </div>
       </div>
-      <div class="main-wrapper">
-        <header class="secttion-contact">
+
+      <div class="main-wrapper section-sign-up" style="padding-top: 5px">
+        <div class="section-sign-up">
           <div class="padding-global">
             <div class="container-large">
-              <div class="contact-component">
-                <h2 class="heading-style-h2">Land Registration Form</h2>
-
-                <div class="contact-form-block w-form">
-                  <form class="contact-form">
-                    <!-- Row 1 -->
-                    <div class="form-row">
-                      <div class="contact-input-field-wrapper">
-                        <label for="fullname">Full Name *</label>
-                        <input
-                          type="text"
-                          id="fullname"
-                          name="fullname"
-                          placeholder="Ex. Muhammad Ali"
-                          required
-                        />
-                      </div>
-
-                      <div class="contact-input-field-wrapper">
-                        <label for="cnic">CNIC / NIC *</label>
-                        <input
-                          type="text"
-                          id="cnic"
-                          name="cnic"
-                          placeholder="Ex. 35202-1234567-8"
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    <!-- Row 2 -->
-                    <div class="form-row">
-                      <div class="contact-input-field-wrapper">
-                        <label for="phone">Phone Number *</label>
-                        <input
-                          type="tel"
-                          id="phone"
-                          name="phone"
-                          placeholder="Ex. 0300-1234567"
-                          required
-                        />
-                      </div>
-
-                      <div class="contact-input-field-wrapper">
-                        <label for="email">Email (Optional)</label>
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          placeholder="Ex. example@gmail.com"
-                        />
-                      </div>
-                    </div>
-
-                    <!-- Row 3 -->
-                    <div class="form-row">
-                      <div class="contact-input-field-wrapper">
-                        <label for="landtype">Land Type *</label>
-                        <select id="landtype" name="landtype" required>
-                          <option value="">-- Select Land Type --</option>
-                          <option value="agriculture">Agriculture</option>
-                          <option value="residential">Residential</option>
-                          <option value="commercial">Commercial</option>
-                          <option value="industrial">Industrial</option>
-                        </select>
-                      </div>
-
-                      <div class="contact-input-field-wrapper">
-                        <label for="areasize">Area Size *</label>
-                        <input
-                          type="text"
-                          id="areasize"
-                          name="areasize"
-                          placeholder="Ex. 5 Marla / 1 Kanal"
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    <!-- Row 4 -->
-                    <div class="form-row">
-                      <div class="contact-input-field-wrapper">
-                        <label for="address">Location / Address *</label>
-                        <input
-                          type="text"
-                          id="address"
-                          name="address"
-                          placeholder="Enter land address"
-                          required
-                        />
-                      </div>
-
-                      <div class="contact-input-field-wrapper">
-                        <label for="plotno">Khasra / Plot No *</label>
-                        <input
-                          type="text"
-                          id="plotno"
-                          name="plotno"
-                          placeholder="Ex. Plot # 123"
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    <!-- Row 5 (description full width) -->
-                    <div class="form-row full-width">
-                      <div class="contact-input-field-wrapper">
-                        <label for="description">Description</label>
-                        <textarea
-                          id="description"
-                          name="description"
-                          placeholder="Enter additional details about land..."
-                        ></textarea>
-                      </div>
-                    </div>
-
-                    <!-- Row 6 (file uploads side by side) -->
-                    <div class="form-row">
-                      <div class="contact-input-field-wrapper">
-                        <label for="cnicdoc">Upload CNIC Document *</label>
-                        <input
-                          type="file"
-                          id="cnicdoc"
-                          name="cnicdoc"
-                          required
-                        />
-                      </div>
-
-                      <div class="contact-input-field-wrapper">
-                        <label for="landdoc">Upload Land Document *</label>
-                        <input
-                          type="file"
-                          id="landdoc"
-                          name="landdoc"
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    <!-- Submit -->
-                    <input
-                      style="margin-top: 15px; text-align: center"
-                      type="submit"
-                      class="button is-submit w-button"
-                      value="Submit"
+              <div class="sign-up-component">
+                <div class="sign-up-form-block w-form">
+                  <!-- Logo / top content  -->
+                  <div class="sign-up-image-wrapper">
+                    <img
+                      width="26.97"
+                      height="27.8"
+                      alt=""
+                      src="https://cdn.prod.website-files.com/68a06250db2face4039500cc/68a1de69c99ec56a47cdb3a5_login%20Logo.svg"
+                      loading="lazy"
+                      class="sing-up-image"
                     />
-
-                    <!-- Success & Error Messages -->
-                    <div class="w-form-done">
-                      <div>Thank you! Your submission has been received!</div>
+                  </div>
+                  <div class="sign-up-top-content">
+                    <h5 class="heading-style-h5">Investor Payment</h5>
+                    <div class="text-size-regular">
+                      Calculate your investment based on shares
                     </div>
-                    <div class="w-form-fail">
-                      <div>
-                        Oops! Something went wrong while submitting the form.
+                  </div>
+
+                  <!-- Shares Calculator Form -->
+                  <form
+                    id="shares-form"
+                    name="shares-form"
+                    class="sign-up-from"
+                  >
+                    <!-- Project Info -->
+                    <div class="sign-up-field-wrapper">
+                      <label class="text-size-regular text-color-black-800"
+                        >Project: Modern Residential Complex</label
+                      >
+                      <p style="margin-top: 5px; font-size: 14px; color: #555">
+                        Milestones: 5
+                      </p>
+                      <p style="margin-top: 5px; font-size: 14px; color: #555">
+                        Price per Share: <span id="sharePrice">50,000</span> PKR
+                      </p>
+                    </div>
+
+                    <!-- Shares Input Row -->
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap">
+                      <div class="sign-up-field-wrapper" style="flex: 1">
+                        <label class="text-size-regular text-color-black-800"
+                          >Number of Shares</label
+                        >
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            margin-top: 5px;
+                          "
+                        >
+                          <button
+                            type="button"
+                            id="minusBtn"
+                            style="
+                              width: 30px;
+                              height: 30px;
+                              font-size: 20px;
+                              border: none;
+                              background: #eee;
+                              cursor: pointer;
+                              border-radius: 5px;
+                            "
+                          >
+                            -
+                          </button>
+                          <input
+                            type="number"
+                            id="shareInput"
+                            value="1"
+                            min="1"
+                            style="
+                              width: 60px;
+                              text-align: center;
+                              padding: 5px;
+                              border: 1px solid #ccc;
+                              border-radius: 5px;
+                            "
+                          />
+                          <button
+                            type="button"
+                            id="plusBtn"
+                            style="
+                              width: 30px;
+                              height: 30px;
+                              font-size: 20px;
+                              border: none;
+                              background: #eee;
+                              cursor: pointer;
+                              border-radius: 5px;
+                            "
+                          >
+                            +
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="sign-up-field-wrapper" style="flex: 1">
+                        <label class="text-size-regular text-color-black-800"
+                          >Total Value</label
+                        >
+                        <input
+                          type="text"
+                          id="totalValue"
+                          value="50,000"
+                          readonly
+                          style="
+                            margin-top: 5px;
+                            width: 100%;
+                            padding: 10px;
+                            border: 1px solid #ccc;
+                            border-radius: 5px;
+                            background: #f9f9f9;
+                            font-weight: bold;
+                          "
+                        />
                       </div>
                     </div>
+
+                    <!-- Account Number -->
+                    <div class="sign-up-field-wrapper" style="margin-top: 20px">
+                      <label class="text-size-regular text-color-black-800"
+                        >Account Number</label
+                      >
+                      <input
+                        type="text"
+                        id="accountNumber"
+                        name="accountNumber"
+                        placeholder="Enter your account number"
+                        required
+                        style="
+                          margin-top: 5px;
+                          width: 100%;
+                          padding: 10px;
+                          border: 1px solid #ccc;
+                          border-radius: 5px;
+                        "
+                      />
+                    </div>
+
+                    <!-- Upload Receipt -->
+                    <div class="sign-up-field-wrapper" style="margin-top: 20px">
+                      <label class="text-size-regular text-color-black-800"
+                        >Upload Receipt (PDF / Image / Doc)</label
+                      >
+                      <input
+                        type="file"
+                        id="receiptUpload"
+                        name="receiptUpload"
+                        accept=".pdf, .jpg, .jpeg, .png, .doc, .docx"
+                        required
+                        style="
+                          margin-top: 5px;
+                          width: 100%;
+                          padding: 8px;
+                          border: 1px solid #ccc;
+                          border-radius: 5px;
+                          background: #f9f9f9;
+                        "
+                      />
+                    </div>
+
+                    <!-- Submit Payment Button -->
+                    <input
+                      type="submit"
+                      data-wait="Please wait..."
+                      class="button is-secondary is-normal w-button"
+                      value="Submit Payment"
+                      style="margin-top: 20px"
+                    />
                   </form>
                 </div>
               </div>
             </div>
           </div>
-        </header>
+        </div>
       </div>
 
-      <!-- CSS -->
-      <style>
-        .contact-form {
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
+      <script>
+        const sharePrice = 50000;
+        const shareInput = document.getElementById("shareInput");
+        const totalValue = document.getElementById("totalValue");
+        const plusBtn = document.getElementById("plusBtn");
+        const minusBtn = document.getElementById("minusBtn");
+
+        function updateTotal() {
+          let shares = parseInt(shareInput.value) || 1;
+          totalValue.value = (shares * sharePrice).toLocaleString();
         }
 
-        .form-row {
-          display: grid;
-          grid-template-columns: 1fr 1fr; /* 2 columns */
-          gap: 20px;
-        }
+        plusBtn.addEventListener("click", () => {
+          shareInput.value = parseInt(shareInput.value || 1) + 1;
+          updateTotal();
+        });
 
-        .form-row.full-width {
-          grid-template-columns: 1fr; /* full row */
-        }
+        minusBtn.addEventListener("click", () => {
+          let val = parseInt(shareInput.value || 1);
+          if (val > 1) shareInput.value = val - 1;
+          updateTotal();
+        });
 
-        .contact-input-field-wrapper {
-          display: flex;
-          flex-direction: column;
-        }
+        shareInput.addEventListener("input", updateTotal);
 
-        input,
-        select,
-        textarea {
-          width: 100%;
-          padding: 10px;
-          border: 1px solid #ccc;
-          border-radius:30px;
-          font-size: 16px;
-        }
+        // initial calculation
+        updateTotal();
+      </script>
 
-        textarea {
-          min-height: 200px;
-          resize: vertical;
-        }
-
-        .button {
-          padding: 12px 20px;
-          background: #333;
-          color: #fff;
-          border: none;
-          border-radius: 6px;
-          cursor: pointer;
-        }
-
-        .button:hover {
-          background: #000;
-        }
-      </style>
-
-      <!-- footrer   -->
-
-      <footer class="section-footer" style="padding-top: 120px">
+      <footer class="section-footer" style="padding-top: 150px">
         <div class="padding-global">
           <div class="container-large">
             <div class="footer-component">
@@ -550,3 +542,6 @@
     ></script>
   </body>
 </html>
+
+
+
